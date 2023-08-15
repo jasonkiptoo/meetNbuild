@@ -1,47 +1,102 @@
-<template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
 
+<template>
+  <q-layout view="hHh lpR fFf">
+
+    <q-header elevated class="bg-primary text-white">
+      <q-toolbar>
         <q-toolbar-title>
-          Quasar App
+          <q-avatar style="background-color: #FFA500;  color: #000;"  size="xl" >
+
+               M&B
+          </q-avatar>
+           MEET&BUILD
+
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+
+
+
+        <q-tabs
+          color="orange"
+          active-color="orange"
+          indicator-color="orange"
+
+        >
+
+
+
+
+
+
+          <q-tab name="home" icon="home" label="Home">
+
+          </q-tab>
+
+          <q-tab name="services" icon="settings" label="Services">
+
+          </q-tab>
+          <q-tab icon="info" label="About">
+
+          </q-tab>
+          <q-tab label="portfolio" icon="work">
+
+          </q-tab>
+          <q-tab label="members" icon="people">
+
+          </q-tab>
+          <q-tab icon="email" label="Contact">
+          </q-tab>
+    </q-tabs>
+
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
+
+
+
+
+ <!-- <q-page-container style="background-color: #197BD5;">
+
+<q-btn color="red">
+
+</q-btn>
+
+
+      <q-page>
+        <q-tabs
+          color="orange"
+          active-color="positive"
+          indicator-color="orange"
+          align="justify"
         >
-          Essential Links
-        </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
 
-    <q-page-container>
-      <router-view />
-    </q-page-container>
+
+
+
+
+          <q-tab name="home" icon="home" label="Home">
+
+          </q-tab>
+
+          <q-tab name="services" icon="settings" label="Services">
+
+          </q-tab>
+          <q-tab icon="info" label="About">
+
+          </q-tab>
+          <q-tab label="portfolio" icon="work">
+
+          </q-tab>
+          <q-tab label="members" icon="people">
+
+          </q-tab>
+          <q-tab icon="email" label="Contact">
+          </q-tab>
+        </q-tabs>
+      </q-page>
+    </q-page-container> -->
+
   </q-layout>
 </template>
 
@@ -98,7 +153,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+
   },
 
   setup () {
