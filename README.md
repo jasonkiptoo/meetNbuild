@@ -73,6 +73,16 @@ quasar dev
 ```
 
 # If you got here then you should see our landing page
+
+
+
+
+![Screenshot (103)](https://github.com/jasonkiptoo/meetNbuild/assets/45195231/c5c07797-208a-4169-852d-2b17b4ada840)
+
+
+
+
+
 ### Happy coding 🎈🎈🎈🎈🎈✨✨✨
 
 
