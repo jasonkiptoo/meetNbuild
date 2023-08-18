@@ -3,9 +3,9 @@
     <q-header elevated class="bg-black text-white q-pt-md">
       <q-toolbar>
         <q-toolbar-title>
-          <q-avatar style="background-color: #ffa500; color: #000" size="xl">
+          <!-- <q-avatar style="background-color: #ffa500; color: #000" size="xl">
             M&B
-          </q-avatar>
+          </q-avatar> -->
           MEET&BUILD
         </q-toolbar-title>
 
@@ -14,8 +14,9 @@
           active-color="orange"
           indicator-color="orange"
           inline-label
-          v-model="activeTab"
-          @click="changeTab"
+          transition-next="slide-down"
+          v-model="activeTab" narrow-indicator
+          @click="changeTab(name)"
         >
           <q-tab name="home" icon="home" label="Home"> </q-tab>
           <q-tab name="services" icon="settings" label="Services"> </q-tab>
@@ -46,18 +47,14 @@ export default defineComponent({
     // const leftDrawerOpen = ref(false);
 
     return {
-      activeTab: "home",
-
-      // leftDrawerOpen,
-      // toggleLeftDrawer() {
-      //   leftDrawerOpen.value = !leftDrawerOpen.value;
-      // },
+      activeTab: ref("home"),
     };
   },
 
   methods: {
-    changeTab() {
-      // console.log("jidwehbwci", this.activeTab);
+    changeTab(tabName) {
+      this.activeTab = this.activeTab;
+      // console.log("jidwehbwci", this.tabName);
       this.$router.push({ path: this.activeTab });
     },
   },
@@ -66,6 +63,6 @@ export default defineComponent({
 
 <style scoped>
 .container {
-  background-color: #197bd5;
+  background-color: #F8F8F8;
 }
 </style>

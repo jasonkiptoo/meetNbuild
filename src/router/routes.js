@@ -1,12 +1,17 @@
 const routes = [
   {
-    path: "/",
+    path: "/home",
     component: () => import("src/layouts/LandingPage.vue"),
     children: [
-      { path: "/dashboard", component: () => import("pages/IndexPage.vue") },
+      { path: "/home", component: () => import("src/pages/HomePage.vue") },
+      { path: "/dashboard", component: () => import("src/pages/HomePage.vue") },
       { path: "/services", component: () => import("pages/ServicesPage.vue") },
+      { path: "/members", component: () => import("pages/MembersPage.vue") },
       { path: "/aboutus", component: () => import("pages/AboutUs.vue") },
-      { path: "/portfolio", component: () => import("pages/PortfolioPage.vue") },
+      {
+        path: "/portfolio",
+        component: () => import("pages/PortfolioPage.vue"),
+      },
     ],
   },
 
